@@ -1,0 +1,104 @@
+#cards{
+	/* 軸 - row */
+  display: flex;
+	flex-wrap: wrap;
+}
+
+.card{
+  /* 卡片在容器裡的排版 */
+	
+	flex: 7% 0 1;
+	/* flex-basis, flex-grow, flex-shrink */
+	height: 8vw;
+	border: 2px solid #e0e0e0;
+	
+	
+	/* 卡片內部元素的排版 */
+	display: flex;
+	/* main axis */
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.card img{
+	max-width: 30%;
+	align-self: center;
+}
+
+.card p{
+	margin: 3px;
+	font-size: 25px;
+}
+
+.card p:last-child{
+	transform: rotate(180deg);
+}
+
+.back{
+	background-image: url('https://assets-lighthouse.alphacamp.co/uploads/image/file/9222/ExportedContentImage_00.png');
+	/* 調整背景圖片 */
+	background-size: cover;
+}
+
+.paired {
+	background-color: #dae0e3;
+}
+
+#header {
+display: flex;
+margin: 0 auto;
+flex-direction: column;
+align-items: flex-end;
+width: 85%;
+}
+
+#header .title {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+#header .title img {
+	max-width: 3em;
+}
+
+#header .title h2 {
+	padding-left: 0.5em;
+}
+#header .score {
+	margin: 0;
+	color: #6c90ac;
+}
+
+#header .tried {
+	margin-top: 0;
+}
+
+#cards {
+	display: flex;
+	flex-wrap: wrap;   
+	width: 85%; /* 新增：寬度和標頭一致 */
+	margin: 0 auto;  /* 新增：置中 */
+}
+
+.card {
+  box-sizing: border-box;
+  flex: 7% 1 1;  /* 修改：卡片需要分配剩餘空間 */
+  height: 8vw;
+  border: 2px solid #e0e0e0;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.wrong {
+  animation-name: wrongAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+}
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid #ffd54f;
+  }
+}
